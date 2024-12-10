@@ -2,7 +2,7 @@
 
 ## What is Javascript?
 
-* JavaScript is a high-level, versatile programming language primarily used to create dynamic and interactive content on websites. 
+* JavaScript is a high-level, programming language primarily used to create dynamic and interactive on websites. 
 
 * It is one of the core technologies of the World Wide Web, alongside HTML and CSS. JavaScript allows developers to build responsive and user-friendly web applications.
 
@@ -14,9 +14,7 @@
 
 * Event Handling: Responds to user actions such as clicks, mouse movements, or keyboard inputs.
 
-* Cross-Platform: Runs on any browser with a JavaScript engine, making it platform-independent
-
-* Extensibility: Works well with APIs, databases, and frameworks.
+* Cross-Platform-Independent: Runs on any browser with a JavaScript engine, making it platform-independent
 
 ## Common Uses of JavaScript
 
@@ -31,6 +29,8 @@
 * Automation and Scripting: Simplifies tasks and processes.
 
 ## variables in JS 
+
+variables are used to store and manage data
 
 * var : was traditional way of declaring variables in JavaScript. When we use var keyword to declare the variable we can able to redeclare it in the function
 
@@ -54,24 +54,21 @@ functions are reusable blocks of code designed to perform specific tasks. They a
   - Normal functions are traditional way implement function
   - Uses the function keyword to define a function.
   - Syntax can include a name or be anonymous.
-  - The value of this inside a regular function depends on how the function is called.
   - Regular functions can be used as constructors with the new keyword.
-  - Regular functions have access to the arguments object, which is an array-like object containing all the arguments passed to the function.
-  - In regular functions, you must explicitly use the return statement to return a value.
+  - Regular functions have access to the arguments object with out receiving any parameters.
+  - In regular functions, we must use the return statement to return a value or the function will return this value.
 
 * Arrow Functions
   - Uses the arrow (=>) syntax
   - More concise, especially for small functions
   - Arrow functions do not have their own this. They inherit this from the surrounding lexical scope (i.e., the context where they are defined).
   - Arrow functions cannot be used as constructors. Attempting to use new with an arrow function results in an error.
-  - Arrow functions do not have their own arguments object. They inherit it from their enclosing scope.
-  - Arrow functions have an implicit return for single expressions. If the function consists of only one expression, return is implicit.
+  - Arrow functions do not have their own arguments object
+  - Arrow functions have an own return for single expressions.
 
 ## What is hoisting in JavaScript?
 
-* JavaScript is a behavior in which a function or a variable can be used before declaration. 
-
-* This process allows you to use variables and call functions before they are actually declared in the code
+* JavaScript is a behavior in which a function can be used before declaration. 
 
 ## What is a closure in JavaScript?
 
@@ -83,15 +80,15 @@ This means that inner functions can access variables from their outer function e
 
 * null is an assignment value, meaning that a variable has been declared and given the value of null.
 
-##  What is the difference between synchronous and asynchronous execution?
+## What is the difference between synchronous and asynchronous execution?
 
 * Synchronous: Operations are executed one after another, blocking further code execution until the current operation completes.
 
 * Asynchronous: Operations are executed independently of the main program flow, allowing other code to run while waiting for the operation to complete (e.g., API calls, file reading).
 
-## What are Promises in JavaScript?
+## Promise
 
-* A Promise is an object representing the eventual completion or failure of an asynchronous operation. It has three states:
+A Promise is a special JavaScript object. It produces a value after an asynchronous (aka, async) operation completes successfully
 
 ## What are arrow functions, and how are they different from regular functions?
 
@@ -119,7 +116,7 @@ The this keyword refers to the context in which a function is called. It can ref
 
 Event delegation is a technique where you attach a single event listener to a parent element instead of multiple listeners to child elements. The event listener is triggered by events that propagate (bubble) up to the parent element.
 
-##  Explain the difference between == and ===.
+## Explain the difference between == and ===.
 
 * == (Loose equality): Compares values after performing type coercion.
 
@@ -165,10 +162,6 @@ Async and Await in JavaScript is used to simplify handling asynchronous operatio
 * Await
   - The await keyword is used to wait for a promise to resolve. It can only be used within an async block.
   - Await makes the code wait until the promise returns a result, allowing for cleaner and more manageable asynchronous code.
-
-## Promise
-
-A Promise is a special JavaScript object. It produces a value after an asynchronous (aka, async) operation completes successfully
 
 ## Why we need typescript
 
