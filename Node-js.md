@@ -1,8 +1,10 @@
 # Node js
 
-## What is node js
+## What is node js 
 
-Node.js is a open-source, cross-platform JavaScript runtime environment built on Chrome's V8 JavaScript engine. It allows developers to execute JavaScript code on the server side, enabling back-end development with the same language used for front-end scripting.
+* Node.js is a JavaScript runtime environment execute JavaScript code on the server side, enabling back-end development 
+
+* Node.js built on Chrome's V8 JavaScript engine.
 
 ## What is the difference between Node.js and JavaScript?
 
@@ -24,12 +26,11 @@ Node.js is a open-source, cross-platform JavaScript runtime environment built on
 
 ## What is npm in Node.js?
 
-npm (Node Package Manager) is the default package manager for Node.js. It allows developers to install, manage, and share reusable JavaScript code packages.
-
+npm (Node Package Manager) is the default package manager for Node.js. It allows to install, manage, and share reusable JavaScript code packages.
 
 ## Asynchronous and Event-Driven
 
-* Node.js uses non-blocking I/O operations, meaning it handles multiple requests concurrently without waiting for one to complete.
+* Node.js uses non-blocking I/O operations, it handles multiple requests concurrently without waiting for one to complete.
 
 * The event-driven architecture uses an event loop to handle asynchronous tasks.
 
@@ -59,7 +60,7 @@ The event loop is a core mechanism of Node.js, enabling it to perform non-blocki
 
 ## Streams
 
-SStreams are objects in Node.js that allow you to read data or write data continuously.
+Streams are objects in Node.js that allow you to read or write data continuously.
 
 * Readable: For reading operations.
 
@@ -71,7 +72,7 @@ SStreams are objects in Node.js that allow you to read data or write data contin
 
 ## Buffer
 
-*  Buffers are used to handle binary data in Node.js. They are particularly useful when dealing with file system operations or TCP streams.
+* Buffers are used to handle binary data in Node.js. They are particularly useful when dealing with file system operations or TCP streams.
 
 ## callback hell.
 
@@ -103,14 +104,13 @@ Node.js provides the fs module for file operations.
 
 The http and https modules allow building web servers.
 
-
 ## How does Node.js handle concurrency?
 
 Node.js uses a single-threaded event loop to handle multiple concurrent requests. It delegates I/O operations to the system kernel, which is optimized to handle asynchronous operations.
 
 ## What are worker threads in Node.js?
 
-Worker threads are used to execute JavaScript code in parallel, allowing CPU-intensive tasks to run without blocking the event loop.
+Worker threads are used to execute JavaScript code in parallel, allowing (CPU-intensive tasks) to run without blocking the event loop.
 
 ## What is the difference between fork() and spawn() in Node.js?
 
@@ -140,7 +140,7 @@ You can handle asynchronous code using
 
 ## Promises
 
-The Promise object represents execute  an asynchronous operation and its resulting value in node js.
+The Promise object represents execute an asynchronous operation and its resulting value in node js.
 
 ## Async/await
 
@@ -182,7 +182,7 @@ Request and response both are middleware functions in http request
 * Request 
   - refers to the information sent by the client to the server when the client wants to access specific datas
 
-  - t includes details such as the HTTP method (GET, POST, PUT, DELETE, etc.)
+  - That includes details such as the HTTP method (GET, POST, PUT, DELETE, etc.)
 
 * Response 
   - refers to the information sent back by the server to the client request
