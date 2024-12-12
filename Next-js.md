@@ -47,6 +47,7 @@ Next.js uses the filesystem to define routes. Each file in the pages/ directory 
 ISR allows you to update static content after deployment by regenerating the page in the background.
 
 ## What are API Routes in Next.js?
+
  API Routes are used to create backend endpoints within a Next.js app. These are defined inside the pages/api/ directory.
 
 ## What is getStaticProps and getServerSideProps?

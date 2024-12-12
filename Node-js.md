@@ -30,7 +30,7 @@ npm (Node Package Manager) is the default package manager for Node.js. It allows
 
 ## Asynchronous and Event-Driven
 
-* Node.js uses non-blocking I/O operations, it handles multiple requests concurrently without waiting for one to complete.
+* Node.js uses non-blocking I/O operations handle Asynchronous, it handles multiple requests concurrently without waiting for one to complete.
 
 * The event-driven architecture uses an event loop to handle asynchronous tasks.
 
@@ -46,7 +46,7 @@ Node.js has a modular system to keep code organized and reusable.
 
 ## Event Loop
 
-The event loop is a core mechanism of Node.js, enabling it to perform non-blocking I/O operations. expectily used for handles all asynchronous operations
+The event loop is a core mechanism of Node.js, enabling it to perform multiple tasks without blocking main thread. expectily used for handles all Asynchronous operations
 
 * Timers
 
@@ -60,7 +60,7 @@ The event loop is a core mechanism of Node.js, enabling it to perform non-blocki
 
 ## Streams
 
-Streams are objects in Node.js that allow you to read or write data continuously.
+Streams in Node.js are a way to handle reading and writing of data efficiently. They allow processing of data in chunks, rather than loading the entire data set into memory
 
 * Readable: For reading operations.
 

@@ -199,6 +199,8 @@ Recursion is a where a function calls itself to solve a problem
 
 ## Loops
 
+Loops used to execute a block of code repeatedly based on specific conditions
+
 * for loop : The for loop is a control structure that repeats a block of code a specific number of times. It requires three statements: initialization, condition, and iteration.
 
 *  while loop : The while loop executes a block of code as long as a specified condition is true
@@ -207,7 +209,7 @@ Recursion is a where a function calls itself to solve a problem
 
 * for...of Loop : The for...of loop iterates over iterable objects like arrays, strings, maps, sets, etc. It directly accesses the values of the iterable.
 
-*  for...in Loop : The for...in loop iterates over the enumerable properties (keys) of an object. It’s often used with objects but can also be used with arrays (though not recommended).
+* for...in Loop : The for...in loop iterates over the enumerable properties (keys) of an object. It’s often used with objects but can also be used with arrays (though not recommended).
 
 ## Scope
 
@@ -227,7 +229,7 @@ Higher-order function is a function that can accept other functions as paramete
 
 ## Asynchronus 
 
-* Asynchronous JavaScript refers to the ability of JavaScript to handle tasks that take time (such as network requests, file reading, or timers) without blocking the execution of other code. 
+* Asynchronous JavaScript ability to handle tasks (such as network requests, file reading, or timers) without blocking the execution of other code. 
 
 * This allows JavaScript to perform non-blocking operations, meaning it can start a task and move on to other tasks without waiting for the previous one to finish.
 

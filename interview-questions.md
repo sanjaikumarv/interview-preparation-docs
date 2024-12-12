@@ -46,8 +46,6 @@
 
 24 .Async await?
 
-25 .Promise?
-
 26 .Why we need typescript?
 
 27 .Array?

@@ -17,7 +17,7 @@ In React, components are reusable building blocks that define specific parts of 
 
 * Real DOM 
 
-  - The Real DOM is the actual browser representation of the HTML elements in a web page
+  - The Real DOM is the browser representation of the HTML elements in a web page
 
   - It is a tree-like structure where each element is represented as a node.
 
@@ -93,7 +93,7 @@ The props or propertics in React JS used to pass data from the parent component 
 
 ## useState ?
 
-The useState  is an React hook that manages and stores data within a component. It returns two arrays of functions: the initial state and a setState function used to update the component's state.. 
+The useState is an React hook that manages and stores data within a component. It returns two arrays of functions: the initial state and a setState function used to update the component's state.. 
 
 ## useEffect?
 
