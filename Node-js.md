@@ -24,6 +24,46 @@
 
 * Provides a rich library of modules through npm (Node Package Manager).
 
+## What is API ?
+An API (is an Application Programming Interface) allows different software applications or servers to communicate with each other using a set of rules and protocols.
+
+## Why REST APIs commonly used?
+The REST API offer several advantages that make them versatile, scalable, and easy to work.
+
+* Simplicity and Ease of Use
+  - Human-Readable: REST APIs use standard HTTP methods (GET, POST, PUT, DELETE), which are easy to understand and implement.
+
+  - JSON Data Format: REST APIs often use JSON (JavaScript Object Notation), which is lightweight, easy to read, and supported by most programming languages.
+
+* Stateless Architecture
+  - No Server-Side State: Each request is independent and carries all necessary information (stateless), making it easier to scale horizontally (adding more servers to handle more traffic).
+
+  - Scalability: Statelessness makes REST APIs ideal for large-scale, distributed systems.
+
+* Flexibility and Compatibility
+  - Language and Platform Agnostic: You can consume and build REST APIs using any programming language (e.g., JavaScript, Python, Java, C#).
+  - Works Over HTTP: Since it uses the standard HTTP protocol, it can be used in web, mobile, and cloud-based applications.
+
+## What is API end-point?
+Endpoints are crucial for interacting with RESTful APIs, allowing clients to perform operations like retrieving, creating, updating, or deleting data.
+
+## Components of a REST API Endpoint?
+* Base URL:
+  - The root address of the API server.
+  - Example: https://api.example.com
+
+* Resource Path:
+  - Specifies the resource being accessed.
+  - Example: /users, /products, /orders/123
+
+* HTTP Method:
+  - Defines the operation to perform (e.g., GET, POST, PUT, DELETE).
+
+* Parameters 
+  - Query Parameters: Extra info passed in the URL (e.g., ?page=2).
+  - Path Parameters: Variable segments within the endpoint path (e.g., /users/{id}).
+
+
 ## What is npm in Node.js?
 
 npm (Node Package Manager) is the default package manager for Node.js. It allows to install, manage, and share reusable JavaScript code packages.
