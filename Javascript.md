@@ -88,7 +88,7 @@ This means that inner functions can access variables from their outer function e
 
 ## Promise
 
-A Promise is a special JavaScript object. It produces a value after an asynchronous (aka, async) operation completes successfully
+The promise is used to track asynchronous event has been executed or not and determines what happens after the event has occurred.
 
 ## What are arrow functions, and how are they different from regular functions?
 
@@ -254,3 +254,24 @@ The event loop in JavaScript is a runtime model that allows JavaScript to handl
 * Engine : A JavaScript engine that reads, optimizes, and executes JavaScript code. These engines power modern web browsers and server-side environments
 
 * Run time : A JavaScript runtime provides an environment where JavaScript code can execute. It includes the JavaScript engine along with additional tools and libraries
+
+
+
+## What is hoiesting  and how to it works?
+
+## What is event loop in js
+
+## What is diff between setTimeout and setIntertval?
+
+## What are the latest js features?
+let rest spread,tmplate str arr fn ,promise
+
+## What scnario using let variable?
+
+
+## What is shallow cloning and deep cloning?
+
+
+## What is diff between map and reduce?
+
+## Diff between promise and callback?

@@ -1,5 +1,8 @@
 # Node js
 
+## What is backend?
+The backend ensures the application's scalability, performance, and security. It acts as the backbone of any web application, supporting user interactions and providing dynamic content.
+
 ## What is node js 
 
 * Node.js is a JavaScript runtime environment execute JavaScript code on the server side, enabling back-end development 
