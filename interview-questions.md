@@ -1,75 +1,17 @@
-1 .What is Javascript?
+## What is webhook in node js?
 
-2 .Key Features of JavaScript?
+## Why we using node js?
 
-3 .Common Uses of JavaScript?
+## Why mongodb is familer for other data bases?
 
-4 .variables in JS? 
+## what is diff between require and import?
 
-5 .Functions?
+## What is event in node js
 
-6 .Types of Functions in JavaScript?
+## GraphQl api?
 
-7 .Normal Funtions vs Arrow Functions?
+## What is diff between promise and async await ?
 
-8 .What is hoisting in JavaScript?
+## What is streams?
 
-9 .What is a closure in JavaScript?
-
-10 .What is the difference between null and undefined?
-
-11 .What is the difference between synchronous and asynchronous execution?
-
-12 .What are Promises in JavaScript?
-
-13 .What are arrow functions, and how are they different from regular functions?
-
-14 .Explain the this keyword in JavaScript.
-
-15 .What are JavaScript data types?
-
-16 .What is event delegation?
-
-17 .Explain the difference between == and === ?
-
-18 .Rest operator?
-
-19 .Spread operator?
-
-20 .Nullish coalesing operator?
-
-21 .Ternery operator?
-
-22 .And operator?
-
-23 .Callbacks?
-
-24 .Async await?
-
-26 .Why we need typescript?
-
-27 .Array?
-
-28 .Object?
-
-29 .Array vs object?
-
-30 .Recursion?
-
-31 .Loops?
-
-32 .Scope?
-
-33 .Higher order functions?
-
-34 .Asynchronus?
-
-35 .Modules?
-
-36 .Browser APIs ?
-
-37 .DOM?
-
-38 .Event loop?
-
-39 .Javascript Engine and run time?
+## Load balancing in node js ?
