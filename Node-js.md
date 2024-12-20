@@ -17,15 +17,70 @@ The backend ensures the application's scalability, performance, and security. It
 
 ## What are the key features of Node.js?
 
-* Asynchronous and Event-Driven.
+* Based on JavaScript we can use one language for both frontend  and backend
 
-* Single-threaded but highly scalable
+* Node.js uses Asynchronous and Non-Blocking I/O operation allows it to handle multiple requests simultaneously.
 
-* Built on the V8 JavaScript engine for high performance.
+* This makes it ideal for I/O-heavy applications like APIs, real-time apps, and data streaming.
+  
+* Node.js build with chrome V8 Engine for Fast Execution for the Javascript s code JIT(Just in time)  
 
-* Supports non-blocking I/O operations.
+* Node.js has an rich package ecosystem via npm (Node Package Manager).
+  - With over 1 million libraries, makes it easy to add functionality quickly 
 
-* Provides a rich library of modules through npm (Node Package Manager).
+* Microservices Architecture
+  - Can able to build and deploy small, independent services that communicate over APIs.
+
+* Cross-Platform Compatibility
+  - Node.js works on multiple operating systems: Windows, macOS, and Linux.
+  - This makes development and deployment flexible and consistent.
+
+* Community Support
+  - Node.js has a large and active community
+  - Continuous updates, numerous tutorials, and strong community support make it easy to solve issues and find resources.
+
+
+## Why mongodb is familer for other data bases?
+
+MongoDB using no-SQL database for the familierity ans also they able to horizandal scalling
+
+
+## what is diff between require and import?
+
+* require
+  - Was common js feature
+  - Modules are loaded synchronously, which means the execution waits for the required module to be fully loaded before continuing.
+  - A module can export multiple properties, but they are grouped into a single object.
+  - It’s specific to Node.js and not native to browsers.
+  - require() can be used anywhere in the code, meaning modules can be conditionally loaded.
+
+* import/export
+  - ES6 feature.
+  - Asynchronously load the file meaning they are loaded non-blockingly.
+  - This module system is a standard in modern JavaScript and works in both Node.js and browser environments.
+  - Module can export multiple values, and they can be imported individually by name.
+  - Modules are loaded at the top of the file
+
+## What is structured and un structured data in db?
+
+* Structured Data : 
+  - Have highly organized and follows a predefined schema (format).
+  - Consistent Format: Each piece of data follows a specific format or data type (e.g., integers, strings, dates).
+  - Relationships: Data can be related to other data using foreign keys or joins.
+  - Stores data in the table Rows and columns format
+
+* Unstructured Data :
+  - Unstructured Data does not have a predefined schema or consistent format.
+  - No Fixed Schema: Data can be in various formats (text, images, videos, etc.) 
+  - Stores data in document type (json key value pair)
+
+
+## What is horizandal and vertical scalling in db?
+
+* Vertical scalling was increase single instance cpu and gpu for load handling
+
+* Horizandal scalling was add two or more instances for db load handling
+
 
 ## What is API ?
 An API (is an Application Programming Interface) allows different software applications or servers to communicate with each other using a set of rules and protocols.
@@ -66,6 +121,11 @@ Endpoints are crucial for interacting with RESTful APIs, allowing clients to per
   - Query Parameters: Extra info passed in the URL (e.g., ?page=2).
   - Path Parameters: Variable segments within the endpoint path (e.g., /users/{id}).
 
+
+## GraphQl api?
+
+* GraphQL typically operates through a single endpoint for all queries, mutations, and subscriptions.
+* You can query multiple fields or related data in a single request. This is helpful when fetching complex, nested data structures.
 
 ## What is npm in Node.js?
 
@@ -135,9 +195,20 @@ Node.js relies on callbacks, promises, and async/await for error handling.
 
 * Always handle the error event on EventEmitter-based objects
 
-## Middleware in Node.js
+## Middleware in express
 
-Middleware are functions in Node.js that have access to the request, response, and next middleware function. They are commonly used in frameworks like Express.js for handling tasks such as logging, authentication, and request parsing.
+Middleware are the functions that allows you to intercept and manipulate requests and responses before they reach route handlers.
+
+* Types of middlewares
+  - Application-level middleware : These middleware functions are bound to an instance of express() and are executed for all requests to the application or specific routes.
+
+  - Router-level middleware: These middleware functions work on express.Router() instances and are bound to specific routes.
+
+  - Error-handling middleware: Used specifically for handling errors. It takes four arguments: (err, req, res, next).
+
+  - Built-in middleware: Express has built-in middleware functions like express.static(), express.json(), express.urlencoded()
+
+  - Third-party middleware: External libraries such as cors, morgan, helmet, etc., can be used as middleware in Express.
 
 ## File System (fs) Module
 
@@ -231,3 +302,8 @@ Request and response both are middleware functions in http request
   - refers to the information sent back by the server to the client request
   - It contains the HTTP status code indicating the success or failure of the request,
 
+## Load balancing in node js ?
+
+We can handle many user request at the time.
+
+Load balancing means we can creating few Node.js app servers to handle many users request at the time.

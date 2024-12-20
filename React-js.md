@@ -213,18 +213,6 @@ tailwind CSS was CSS framework that provides a set of pre-built utility classes,
 * Suspense for Data Fetching :
  - React 18 improved the Suspense feature, which allows for asynchronous data fetching.
 
-## Explain the concept of hooks in React and give examples of some commonly used hooks
-
-* useState : A hook to add state to functional components.
-
-* useEffect : A hook to perform side effects in functional components, such as data fetching or subscriptions.
-
-* useContext : A hook to access context values within the component tree.
-
-* useReducer : A hook for managing complex state logic in functional components.
-
-* useRef : A hook for accessing DOM elements or mutable values that persist across renders.
-
 ## What is the Virtual DOM, and how does it work?
 
 * The Virtual DOM (VDOM) is an in-memory representation of the actual DOM. React creates a virtual DOM to improve performance by minimizing direct updates to the real DOM. React compares the virtual DOM with the actual DOM (a process called "diffing") and applies only the necessary changes, reducing costly operations.
@@ -299,7 +287,7 @@ tailwind CSS was CSS framework that provides a set of pre-built utility classes,
 
 ## What are error boundaries in React? 
 
-* Error boundaries are React components that catch JavaScript errors in their child components during rendering, in lifecycle methods, and in constructors of the whole tree beneath them. 
+* Error boundaries in React are components that catch JavaScript errors and display a fallback UI instead of the crashed component tree
 
 * They provide a fallback UI and help prevent the entire app from crashing.
 
@@ -316,3 +304,37 @@ tailwind CSS was CSS framework that provides a set of pre-built utility classes,
 ## What is JSX, and how does it differ from HTML?
 
 * JSX (JavaScript XML) is a syntax extension for JavaScript that allows you to write HTML-like code inside JavaScript. It is used to define UI components in React. Unlike HTML, JSX allows embedding JavaScript expressions and requires some additional rules, such as className instead of class for defining CSS classes.
+
+
+## Critical rendering?
+The Critical Rendering is web browser takes to convert HTML, CSS, and JavaScript into a user readable format.
+
+
+## what is useref?
+* It can be used to access a DOM element directly.
+* The useRef Hook allows you to persist values between renders.
+* It can be used to store a mutable value that does not cause a re-render when updated.
+* the useRef is used to mutate the html element in dom
+
+## React diffting?
+
+We should make any changes on UI, React create new virtual DOM for the updated html syntax. And the react algorithms compare new virtual dom to previous virtual dom to identify which changes need to apply the real dom.(Diffing)
+
+## React reconsulation?
+In React reconciliation is updating the virtual changes to real dom
+
+## What are forms in ReactJS?
+
+Forms are used to collect and manage user data through form elements.
+
+## React synthetic event?
+
+React's synthetic event system used wraps the browser's native events and React event object with a consistent API
+
+## Data binding?
+
+Data binding in React refers to the process of synchronizing the data between the component's state and the UI (user interface)
+
+## What is styles component in react?
+
+Styled Components is a popular library in React that allows you to write CSS-in-JS. It enables you to style your components using JavaScript, allowing you to create reusable, dynamic styles that are scoped to individual components. This approach helps to avoid issues like global styles leaking into other parts of your application and allows you to bind styles to props and component states

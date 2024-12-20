@@ -21,7 +21,6 @@ const zlib = require('node:zlib');
 async function run() {
     const res = await pipeline(
         fs.createReadStream('work.txt'),
-        zlib.createGzip(),
         fs.createWriteStream('archive.tar.gz'),
     );
     console.log('Pipeline succeeded.', res);
