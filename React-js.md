@@ -4,7 +4,7 @@
 
 React.js is an open-source JavaScript library developed by Facebook for building user interfaces, particularly for single-page applications. React provides component-based approach for building UIs, allowing developers to create reusable UI components that can be composed together to build complex user interfaces.
 
-## What is synthetic event in React ?
+## What is synthetic event in React?
 
 ## What are components in React?
 
@@ -322,6 +322,11 @@ We should make any changes on UI, React create new virtual DOM for the updated h
 
 ## React reconsulation?
 In React reconciliation is updating the virtual changes to real dom
+
+## React reconsultation algorithm?
+
+...Diffing,
+...reconsulation.
 
 ## What are forms in ReactJS?
 
