@@ -53,7 +53,7 @@ functions are reusable blocks of code designed to perform specific tasks. They a
 * Normal Functions
   - Normal functions are traditional way implement function
   - Uses the function keyword to define a function.
-  - Syntax can include a name or be anonymous.
+  - Syntax can include a name or be .
   - Regular functions can be used as constructors with the new keyword.
   - Regular functions have access to the arguments object with out receiving any parameters.
   - In regular functions, we must use the return statement to return a value or the function will return this value.
@@ -100,8 +100,7 @@ Arrow functions are a shorthand syntax for writing functions. They differ from r
 
 ## Explain the this keyword in JavaScript.
 
-The this keyword refers to the context in which a function is called. It can refer to:
-
+This keyword refers to the object
 * The global object (in non-strict mode).
 
 * The object calling the method 
@@ -267,6 +266,8 @@ The event loop in JavaScript is a runtime model that allows JavaScript to handl
 let rest spread,tmplate str arr fn ,promise
 
 ## What scnario using let variable?
+
+In some scnario we need to use one varible to handle multiple values
 
 
 ## What is shallow cloning and deep cloning?

@@ -77,7 +77,7 @@ MongoDB using no-SQL database for the familierity ans also they able to horizand
 
 ## What is horizandal and vertical scalling in db?
 
-* Vertical scalling was increase single instance cpu and gpu for load handling
+* Vertical scalling was increase single instance cpu and gpu for load handling and db space
 
 * Horizandal scalling was add two or more instances for db load handling
 
@@ -224,7 +224,7 @@ Node.js uses a single-threaded event loop to handle multiple concurrent requests
 
 ## What are worker threads in Node.js?
 
-Worker threads are used to execute JavaScript code in parallel, allowing (CPU-intensive tasks) to run without blocking the event loop.
+Worker threads are used to execute JavaScript in a CPU-intensive tasks to run without blocking the event loop.
 
 ## What is the difference between fork() and spawn() in Node.js?
 
