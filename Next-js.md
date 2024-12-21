@@ -100,3 +100,17 @@ getStaticPaths is used to define dynamic routes for SSG at build time.
 * SSR and SSG for pre-rendered content
 
 * Built-in support for meta tags using the next/head component
+
+## What is the difference between page router and app router in next js?
+
+* Pages router
+  - Uses the pages/ directory.
+  - Simple, automatic routing based on the file structure.
+  - Simpler setup, traditional React Router-like behavior.
+  - Best for simpler apps or those migrating from earlier versions of Next.js
+  
+* App router
+  -  Uses the app/ directory.
+  - Supports nested layouts, React Server Components, and more flexible routing features.
+  - Advanced features like nested routes, layouts, server-side rendering by default, and more fine-grained control.
+  - Ideal for larger apps or those requiring more complex layouts, nested routes, or server-side rendering.
