@@ -1,309 +1,353 @@
-# Node js
+# 🟢 Node.js Interview Questions & Answers (4+ Years Experience)
 
-## What is backend?
+---
+
+## What is Backend?
+
 The backend ensures the application's scalability, performance, and security. It acts as the backbone of any web application, supporting user interactions and providing dynamic content.
 
-## What is node js 
+---
 
-* Node.js is a JavaScript runtime environment execute JavaScript code on the server side, enabling back-end development 
+## What is Node.js?
 
-* Node.js built on Chrome's V8 JavaScript engine.
+* Node.js is a JavaScript runtime environment used to execute JavaScript code on the server side.
+* Built on Chrome's V8 JavaScript engine.
 
-## What is the difference between Node.js and JavaScript?
+---
 
-* ``JavaScript`` is a programming language that primarily runs in browsers to build interactive front-end applications
+## Difference between Node.js and JavaScript?
 
-* ``Node.js``, on the other hand, is a runtime environment that allows JavaScript to run on the server side.
+* **JavaScript**: A programming language that primarily runs in browsers for frontend development.
+* **Node.js**: A runtime environment that enables JavaScript to run on the server.
 
-## What are the key features of Node.js?
+---
 
-* Based on JavaScript we can use one language for both frontend  and backend
+## Key Features of Node.js
 
-* Node.js uses Asynchronous and Non-Blocking I/O operation allows it to handle multiple requests simultaneously.
+* Use JavaScript for both frontend and backend.
+* Asynchronous and non-blocking I/O.
+* Built on Chrome's V8 engine with JIT for fast execution.
+* Rich ecosystem via npm with over a million packages.
+* Supports microservices architecture.
+* Cross-platform support: Windows, macOS, Linux.
+* Large and active community.
 
-* This makes it ideal for I/O-heavy applications like APIs, real-time apps, and data streaming.
-  
-* Node.js build with chrome V8 Engine for Fast Execution for the Javascript s code JIT(Just in time)  
+---
 
-* Node.js has an rich package ecosystem via npm (Node Package Manager).
-  - With over 1 million libraries, makes it easy to add functionality quickly 
+## Why is MongoDB popular compared to other databases?
 
-* Microservices Architecture
-  - Can able to build and deploy small, independent services that communicate over APIs.
+* NoSQL database that supports horizontal scaling.
+* Stores unstructured data in flexible JSON-like documents.
 
-* Cross-Platform Compatibility
-  - Node.js works on multiple operating systems: Windows, macOS, and Linux.
-  - This makes development and deployment flexible and consistent.
+---
 
-* Community Support
-  - Node.js has a large and active community
-  - Continuous updates, numerous tutorials, and strong community support make it easy to solve issues and find resources.
+## Difference between `require` and `import`
 
+* **require**:
 
-## Why mongodb is familer for other data bases?
+  * CommonJS syntax.
+  * Synchronous loading.
+  * Node.js specific.
+  * Can be used conditionally.
 
-MongoDB using no-SQL database for the familierity ans also they able to horizandal scalling
+* **import/export**:
 
+  * ES6 standard.
+  * Asynchronous loading.
+  * Works in both Node.js and browsers.
+  * Modules are loaded at the top of the file.
 
-## what is diff between require and import?
+---
 
-* require
-  - Was common js feature
-  - Modules are loaded synchronously, which means the execution waits for the required module to be fully loaded before continuing.
-  - A module can export multiple properties, but they are grouped into a single object.
-  - It’s specific to Node.js and not native to browsers.
-  - require() can be used anywhere in the code, meaning modules can be conditionally loaded.
+## Structured vs Unstructured Data
 
-* import/export
-  - ES6 feature.
-  - Asynchronously load the file meaning they are loaded non-blockingly.
-  - This module system is a standard in modern JavaScript and works in both Node.js and browser environments.
-  - Module can export multiple values, and they can be imported individually by name.
-  - Modules are loaded at the top of the file
+* **Structured**:
 
-## What is structured and un structured data in db?
+  * Predefined schema.
+  * Uses rows and columns.
+  * Supports relationships.
 
-* Structured Data : 
-  - Have highly organized and follows a predefined schema (format).
-  - Consistent Format: Each piece of data follows a specific format or data type (e.g., integers, strings, dates).
-  - Relationships: Data can be related to other data using foreign keys or joins.
-  - Stores data in the table Rows and columns format
+* **Unstructured**:
 
-* Unstructured Data :
-  - Unstructured Data does not have a predefined schema or consistent format.
-  - No Fixed Schema: Data can be in various formats (text, images, videos, etc.) 
-  - Stores data in document type (json key value pair)
+  * No predefined schema.
+  * JSON, text, images, videos.
 
+---
 
-## What is horizandal and vertical scalling in db?
+## Horizontal vs Vertical Scaling
 
-* Vertical scalling was increase single instance cpu and gpu for load handling and db space
+* **Vertical**: Increase CPU/RAM on a single machine.
+* **Horizontal**: Add multiple machines or instances.
 
-* Horizandal scalling was add two or more instances for db load handling
+---
 
+## What is an API?
 
-## What is API ?
-An API (is an Application Programming Interface) allows different software applications or servers to communicate with each other using a set of rules and protocols.
+An API (Application Programming Interface) allows applications to communicate using a set of rules and protocols.
 
-## Why REST APIs commonly used?
-The REST API offer several advantages that make them versatile, scalable, and easy to work.
+---
 
-* Simplicity and Ease of Use
-  - Human-Readable: REST APIs use standard HTTP methods (GET, POST, PUT, DELETE), which are easy to understand and implement.
+## Why are REST APIs commonly used?
 
-  - JSON Data Format: REST APIs often use JSON (JavaScript Object Notation), which is lightweight, easy to read, and supported by most programming languages.
+* Simple HTTP methods: GET, POST, PUT, DELETE.
+* Stateless architecture.
+* JSON data format.
+* Platform agnostic.
+* Easy to scale.
 
-* Stateless Architecture
-  - No Server-Side State: Each request is independent and carries all necessary information (stateless), making it easier to scale horizontally (adding more servers to handle more traffic).
+---
 
-  - Scalability: Statelessness makes REST APIs ideal for large-scale, distributed systems.
+## What is an API Endpoint?
 
-* Flexibility and Compatibility
-  - Language and Platform Agnostic: You can consume and build REST APIs using any programming language (e.g., JavaScript, Python, Java, C#).
-  - Works Over HTTP: Since it uses the standard HTTP protocol, it can be used in web, mobile, and cloud-based applications.
+* **Base URL**: Root address.
+* **Resource Path**: /users, /orders/123
+* **HTTP Methods**: GET, POST, etc.
+* **Parameters**: Query (?page=1), Path (/user/\:id)
 
-## What is API end-point?
-Endpoints are crucial for interacting with RESTful APIs, allowing clients to perform operations like retrieving, creating, updating, or deleting data.
+---
 
-## Components of a REST API Endpoint?
-* Base URL:
-  - The root address of the API server.
-  - Example: https://api.example.com
+## What is GraphQL?
 
-* Resource Path:
-  - Specifies the resource being accessed.
-  - Example: /users, /products, /orders/123
+* Uses a single endpoint.
+* Clients request specific fields.
+* Ideal for nested/related data.
 
-* HTTP Method:
-  - Defines the operation to perform (e.g., GET, POST, PUT, DELETE).
-
-* Parameters 
-  - Query Parameters: Extra info passed in the URL (e.g., ?page=2).
-  - Path Parameters: Variable segments within the endpoint path (e.g., /users/{id}).
-
-
-## GraphQl api?
-
-* GraphQL typically operates through a single endpoint for all queries, mutations, and subscriptions.
-* You can query multiple fields or related data in a single request. This is helpful when fetching complex, nested data structures.
+---
 
 ## What is npm in Node.js?
 
-npm (Node Package Manager) is the default package manager for Node.js. It allows to install, manage, and share reusable JavaScript code packages.
+* Node Package Manager.
+* Used to install/manage/share code packages.
+
+---
 
 ## Asynchronous and Event-Driven
 
-* Node.js uses non-blocking I/O operations handle Asynchronous, it handles multiple requests concurrently without waiting for one to complete.
+* Handles multiple requests without blocking.
+* Uses event loop.
 
-* The event-driven architecture uses an event loop to handle asynchronous tasks.
+---
 
-## Modules
+## Modules in Node.js
 
-Node.js has a modular system to keep code organized and reusable.
+* **Core**: Built-in (fs, http).
+* **Custom**: User-defined.
+* **Third-party**: From npm.
 
-* Core Modules: Built-in modules like fs, http, path, etc.
+---
 
-* Custom Modules: Developer-defined modules.
+## What is the Event Loop?
 
-* Third-party Modules: Managed via npm (Node Package Manager).
+* Core mechanism for handling async operations.
+* Phases: Timers, Pending Callbacks, I/O Polling, Check, Close Callbacks.
 
-## Event Loop
+---
 
-The event loop is a core mechanism of Node.js, enabling it to perform multiple tasks without blocking main thread. expectily used for handles all Asynchronous operations
+## What are Streams?
 
-* Timers
+* Process data in chunks.
+* **Readable**
+* **Writable**
+* **Duplex**
+* **Transform**
 
-* Pending Callbacks
+---
 
-* I/O Polling
+## What is a Buffer?
 
-* Check
+* Handles binary data in memory.
+* Used in file and TCP operations.
 
-* Close Callbacks
+---
 
-## Streams
+## What is Callback Hell?
 
-Streams in Node.js are a way to handle reading and writing of data efficiently. They allow processing of data in chunks, rather than loading the entire data set into memory
+* Nested callbacks leading to unreadable code.
+* Solved with Promises or async/await.
 
-* Readable: For reading operations.
-
-* Writable: For writing operations.
-
-* Duplex: For both reading and writing.
-
-* Transform: For modifying data during reading/writing.
-
-## Buffer
-
-* Buffers are used to handle binary data in Node.js. They are particularly useful when dealing with file system operations or TCP streams.
-
-## callback hell.
-
-Callback hell refers to the situation where multiple nested callbacks make the code hard to read and maintain. It can be mitigated using promises or async/await.
-
-* Used in streams to handle raw data.
+---
 
 ## Error Handling
 
-Node.js relies on callbacks, promises, and async/await for error handling.
+* **try-catch**: For sync.
+* **.catch()**: For Promises.
+* **async/await**: Use try-catch.
+* Middleware in Express.
 
-* Use try-catch blocks for synchronous code.
+---
 
-* Use .catch() for promises.
+## Middleware in Express
 
-* Use error-handling middleware in Express.js.
+* Functions to modify req/res.
 
-* Always handle the error event on EventEmitter-based objects
+**Types**:
 
-## Middleware in express
+* Application-level
+* Router-level
+* Error-handling
+* Built-in (express.json)
+* Third-party (cors, morgan)
 
-Middleware are the functions that allows you to intercept and manipulate requests and responses before they reach route handlers.
-
-* Types of middlewares
-  - Application-level middleware : These middleware functions are bound to an instance of express() and are executed for all requests to the application or specific routes.
-
-  - Router-level middleware: These middleware functions work on express.Router() instances and are bound to specific routes.
-
-  - Error-handling middleware: Used specifically for handling errors. It takes four arguments: (err, req, res, next).
-
-  - Built-in middleware: Express has built-in middleware functions like express.static(), express.json(), express.urlencoded()
-
-  - Third-party middleware: External libraries such as cors, morgan, helmet, etc., can be used as middleware in Express.
+---
 
 ## File System (fs) Module
 
-Node.js provides the fs module for file operations.
+* For file operations like reading/writing.
 
-## Networking
+---
 
-The http and https modules allow building web servers.
+## Networking in Node.js
+
+* Use `http` and `https` modules to build servers.
+
+---
 
 ## How does Node.js handle concurrency?
 
-Node.js uses a single-threaded event loop to handle multiple concurrent requests. It delegates I/O operations to the system kernel, which is optimized to handle asynchronous operations.
+* Single-threaded event loop.
+* Delegates I/O to OS kernel.
 
-## What are worker threads in Node.js?
+---
 
-Worker threads are used to execute JavaScript in a CPU-intensive tasks to run without blocking the event loop.
+## Worker Threads in Node.js
 
-## What is the difference between fork() and spawn() in Node.js?
+* Used for CPU-intensive tasks.
+* Prevents blocking the event loop.
 
-* fork(): Used to create a new child process with its own Node.js instance, suitable for inter-process communication.
+---
 
-* spawn(): Used to spawn a new process to run a shell command.
+## Difference between `fork()` and `spawn()`
 
-## What are some security practices in Node.js?
+* `fork()`: Runs a new Node.js instance.
+* `spawn()`: Runs shell commands.
 
-* Validate and sanitize user input.
+---
 
-* Use HTTPS to secure data in transit.
+## Security Practices
 
-* Avoid using deprecated or unmaintained npm packages.
+* Validate/sanitize input.
+* Use HTTPS.
+* Avoid deprecated packages.
+* Use env variables.
+* Implement authentication.
 
-* Implement proper authentication and authorization.
+---
 
-* Use environment variables for sensitive configurations.
-
-## How do you handle asynchronous code in Node.js
-
-You can handle asynchronous code using
+## Handling Asynchronous Code
 
 * Callbacks
 * Promises
-* Async/Await
+* async/await
 
-## Promises
+---
 
-The Promise object represents execute an asynchronous operation and its resulting value in node js.
+## What are Promises?
 
-## Async/await
+* Handle async tasks with `.then()` and `.catch()`
 
-async/await is used for cleaner way to handle asynchronous opertations. It is built on top of Promises.
+---
 
-* async Keyword: Declares an asynchronous function. It ensures the function always returns a Promise.
+## What is async/await?
 
-* await Keyword: Pauses the execution of an async function until the Promise resolves or rejects.
+* Syntactic sugar over Promises.
+* `async` function always returns a Promise.
+* `await` pauses execution until Promise resolves.
 
-##  Callbacks
+---
 
-Callbacks are one of the fundamental concepts in Node.js for handling asynchronous operations like file handling, database queries, or API requests.
+## What are Callbacks?
 
-## difference between fs.readFile and readFileSync
+* Function passed as an argument to another function.
+* Used in async operations.
 
-* fs.readFile
-  - Nature: Asynchronous (Non-blocking).
+---
 
-  - Execution: Executes the file reading operation in the background without blocking the main thread.
+## Difference between `fs.readFile` and `fs.readFileSync`
 
-  - Callback: Requires a callback function to handle the result or errors.
+* `fs.readFile`:
 
-  - Use Case: Suitable for applications where other operations should not wait for file reading to complete.
+  * Asynchronous.
+  * Uses callback.
+  * Non-blocking.
 
-* fs.readFileSync
-  - Nature: Synchronous (Blocking).
+* `fs.readFileSync`:
 
-  - Execution: Blocks the execution of subsequent code until the file reading operation is complete
+  * Synchronous.
+  * Blocking.
 
-  - No Callback: Directly returns the content or throws an error.
-
-  - Use Case: Suitable for scripts where sequential execution is required or in scenarios where simplicity is preferred over performance.
-
+---
 
 ## Request vs Response
 
-Request and response both are middleware functions in http request
+* **Request**: Sent from client with method, headers, data.
+* **Response**: Sent from server with status, headers, body.
 
-* Request 
-  - refers to the information sent by the client to the server when the client wants to access specific datas
+---
 
-  - That includes details such as the HTTP method (GET, POST, PUT, DELETE, etc.)
+## Load Balancing in Node.js
 
-* Response 
-  - refers to the information sent back by the server to the client request
-  - It contains the HTTP status code indicating the success or failure of the request,
+* Distributes requests across multiple app servers.
+* Helps scale apps and handle large traffic.
 
-## Load balancing in node js ?
+---
 
-We can handle many user request at the time.
+## Difference between `process.nextTick()`, `setImmediate()`, and `setTimeout()`
 
-Load balancing means we can creating few Node.js app servers to handle many users request at the time.
+| Function             | Execution Timing                                  |
+| -------------------- | ------------------------------------------------- |
+| `process.nextTick()` | Runs **before any I/O**, after current operation. |
+| `setImmediate()`     | Runs on the **next event loop iteration**.        |
+| `setTimeout(fn, 0)`  | Runs after a minimum delay of 0ms.                |
+
+---
+
+## Clustering in Node.js
+
+* Use `cluster` module to create worker processes.
+* Each worker runs on a different CPU core.
+* Enhances concurrency in multi-core environments.
+
+---
+
+## Middleware Chaining in Express
+
+```js
+app.use((req, res, next) => {
+  console.log('Step 1');
+  next();
+});
+```
+
+---
+
+## Synchronous vs Asynchronous Error Handling
+
+* Sync: `try/catch`
+* Async:
+
+  * Callback: `if (err) {}`
+  * Promise: `.catch()`
+  * async/await: `try/catch`
+
+---
+
+## What is `util.promisify()`?
+
+Converts a callback-based function to a promise-based one:
+
+```js
+const { promisify } = require('util');
+const fs = require('fs');
+const readFileAsync = promisify(fs.readFile);
+```
+
+---
+
+## Performance Tuning Techniques
+
+* Use clusters/worker threads.
+* Implement caching.
+* Avoid blocking code.
+* Use `gzip` compression.
+* Optimize DB queries.
+* Use monitoring tools like PM2 or Clinic.js.
