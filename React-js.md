@@ -343,3 +343,11 @@ Data binding in React refers to the process of synchronizing the data between th
 ## What is styles component in react?
 
 Styled Components is a popular library in React that allows you to write CSS-in-JS. It enables you to style your components using JavaScript, allowing you to create reusable, dynamic styles that are scoped to individual components. This approach helps to avoid issues like global styles leaking into other parts of your application and allows you to bind styles to props and component states
+
+
+## How does lifting state up work in React?
+Lifting state is we can share state in multiple child components ,and parent component control children component behaviour
+
+  
+## What is React Fiber?
+React Fiber is the underlying engine of React that enables asynchronous rendering, better performance, and smoother UI updates.

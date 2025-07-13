@@ -351,3 +351,17 @@ const readFileAsync = promisify(fs.readFile);
 * Use `gzip` compression.
 * Optimize DB queries.
 * Use monitoring tools like PM2 or Clinic.js.
+
+## How do you implement retries and exponential backoff in Node.js?
+
+## How do you handle concurrency and parallelism in Node.js?
+
+## How do you handle graceful shutdown in Node.js?
+
+## What is a memory leak in Node.js and how do you detect it?
+
+## Difference between spawn(), exec(), and fork() in child_process?
+
+## How do you manage background jobs in Node.js?
+
+## What is the difference between process.nextTick() and setImmediate() and when would you use them?

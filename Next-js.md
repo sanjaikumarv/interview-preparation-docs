@@ -48,7 +48,7 @@ ISR allows you to update static content after deployment by regenerating the pag
 
 ## What are API Routes in Next.js?
 
- API Routes are used to create backend endpoints within a Next.js app. These are defined inside the pages/api/ directory.
+ API Routes are used to create backend api endpoints within a Next.js app. These are defined inside the pages/api/ directory.
 
 ## What is getStaticProps and getServerSideProps?
 
@@ -66,7 +66,7 @@ ISR allows you to update static content after deployment by regenerating the pag
 
 ## What are middleware in Next.js?
 
-Middleware in Next.js runs before a request is completed. It can modify the request/response objects or redirect users.
+Middleware in Next.js runs code logic before a request is completed. It can modify the request/response objects or redirect users.
 
 ## What are some optimization techniques available in Next.js?
 
@@ -114,3 +114,23 @@ getStaticPaths is used to define dynamic routes for SSG at build time.
   - Supports nested layouts, React Server Components, and more flexible routing features.
   - Advanced features like nested routes, layouts, server-side rendering by default, and more fine-grained control.
   - Ideal for larger apps or those requiring more complex layouts, nested routes, or server-side rendering.
+
+## What are ISR ?
+ISR is a main feature in nextjs used to update the static file content after the build time without rebuilding the entire app
+
+## How does Next.js handle client-side vs server-side navigation?
+Next.js uses the <Link> component for client-side navigation, which prefetches pages. Server-side navigation happens only on the initial page load or through full-page refresh.
+
+## How do you handle redirects and rewrites in Next.js?
+
+# Redirects 
+Redirects allows you to define URL redirects that happen on the server side before rendering a page.
+
+# Rewrites
+Rewrites function allows you to rewrite the URL path on the server without redirecting the user.
+
+# How do you secure API routes and SSR pages in Next.js?
+  - Authenticate users using cookies or JWTs
+  - Verify tokens inside getServerSideProps or API routes
+  - Use middleware for early request validation
+  - Sanitize inputs to avoid injection attacks

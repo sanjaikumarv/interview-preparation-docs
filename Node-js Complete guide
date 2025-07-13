@@ -104,7 +104,7 @@ Manages async operations without blocking main thread:
 
 ## Streams in Node.js
 
-* Handle large data efficiently.
+* Streams are used to process large data chunks piece-by-piece (streaming), instead of loading all into memory.
 * Types:
 
   * Readable
@@ -319,6 +319,7 @@ emitter.emit('start');
 * Data validation (Joi, express-validator)
 * CORS policy
 * HTTPS
+* Environment variables with dotenv
 
 ## What is CSR vs SSR?
 
@@ -356,3 +357,6 @@ const token = jwt.sign({ userId: 1 }, 'secret', { expiresIn: '1h' });
 ---
 
 Let me know if you'd like to split these into beginner/intermediate/advanced sections or export as `.md` or `.pdf`.
+
+## How does clustering work in Node.js?
+Clustering allows Node to utilize multiple CPU cores by creating child processes (workers) that share the same server port.
