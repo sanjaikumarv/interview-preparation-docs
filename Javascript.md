@@ -263,7 +263,7 @@ The event loop in JavaScript is a runtime model that allows JavaScript to handl
 ## What is diff between setTimeout and setIntertval?
 
 ## What are the latest js features?
-let rest spread,tmplate str arr fn ,promise
+let rest spread,tmplate str arr fn ,promise , optional chaining , nullishcocalizing operatoe
 
 ## What scnario using let variable?
 

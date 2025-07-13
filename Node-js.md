@@ -155,15 +155,18 @@ An API (Application Programming Interface) allows applications to communicate us
 
 ## What is a Buffer?
 
-* Handles binary data in memory.
+* A Buffer in Node.js is a built-in object used to handle binary data directly in memory — especially when working with files, network streams, or binary protocols.
 * Used in file and TCP operations.
 
 ---
 
 ## What is Callback Hell?
 
-* Nested callbacks leading to unreadable code.
-* Solved with Promises or async/await.
+* Callback hell is when multiple nested callbacks make the code look messy and hard to manage.
+It usually happens when we handle async operations in sequence without proper structure — like chaining fs.readFile, db.query, and so on inside each other.
+
+* To fix it, I use Promises, async/await, or structure callbacks well using named functions.
+Solved with Promises or async/await.
 
 ---
 
@@ -178,7 +181,9 @@ An API (Application Programming Interface) allows applications to communicate us
 
 ## Middleware in Express
 
-* Functions to modify req/res.
+* Middleware in Express is a function that runs between the request and the response.
+It can modify the request, response, or end the request cycle.
+* I use middleware for tasks like logging, authentication, error handling, and parsing request bodies.
 
 **Types**:
 
@@ -198,7 +203,10 @@ An API (Application Programming Interface) allows applications to communicate us
 
 ## Networking in Node.js
 
-* Use `http` and `https` modules to build servers.
+* Networking in Node.js is done using built-in modules like http, https, net, and dns.
+It allows me to build web servers, TCP/UDP servers, and even handle low-level socket communication.
+
+* I commonly use the http module to create REST APIs, and the net module for working with raw TCP sockets.
 
 ---
 
@@ -303,7 +311,7 @@ An API (Application Programming Interface) allows applications to communicate us
 
 ## Clustering in Node.js
 
-* Use `cluster` module to create worker processes.
+* Clustering is a built-in Node.js module used to utilize all CPU cores by creating multiple child instances of the same app, running on the same port, for load balancing.
 * Each worker runs on a different CPU core.
 * Enhances concurrency in multi-core environments.
 
