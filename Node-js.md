@@ -355,13 +355,24 @@ const readFileAsync = promisify(fs.readFile);
 ## How do you implement retries and exponential backoff in Node.js?
 
 ## How do you handle concurrency and parallelism in Node.js?
+Node.js is single-threaded but supports concurrent operations using:
+ - Event loop
+ - Non-blocking I/O
+ - Asynchronous handling
 
 ## How do you handle graceful shutdown in Node.js?
 
 ## What is a memory leak in Node.js and how do you detect it?
+A memory leak in Node.js happens when the application keeps references to memory that’s no longer needed, preventing the garbage collector from freeing it. Over time, this causes the memory usage to grow continuously, which can lead to performance issues or crashes.
 
 ## Difference between spawn(), exec(), and fork() in child_process?
 
 ## How do you manage background jobs in Node.js?
+In Node.js, I manage background jobs using tools like Bull, Agenda, or node-cron, depending on the use case.
+For queue-based background jobs (like sending emails, processing images, or payments), I use Bull with Redis. It allows job retries, concurrency, and delayed jobs.
+For scheduled jobs (like daily reports), I use node-cron or Agenda, which supports recurring jobs with time-based patterns.
 
 ## What is the difference between process.nextTick() and setImmediate() and when would you use them?
+process.nextTick() and setImmediate() both schedule functions to run asynchronously, but at different phases of the event loop.
+  - process.nextTick() runs before the event loop continues — right after the current operation.
+  - setImmediate() runs in the check phase, after I/O events.
