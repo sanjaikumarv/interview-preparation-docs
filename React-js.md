@@ -4,6 +4,27 @@
 
 React.js is an open-source JavaScript library developed by Facebook for building user interfaces, particularly for single-page applications. React provides component-based approach for building UIs, allowing developers to create reusable UI components that can be composed together to build complex user interfaces.
 
+## React JS Key Features
+
+* Component based architecture
+
+* JSX
+
+* Virtual DOM
+
+* Life cycle methods
+
+* Hooks
+
+* Performance Optimization
+
+* Declarative Syntax
+
+## JSX in React
+
+JavaScript allows to write HTML code directly within the JavaScript code. JSX is a key feature of React.js and is used to define the structure of React components.
+
+
 ## What are components in React?
 
 In React, components are reusable building blocks that define specific parts of a user interface (UI) , that helps to reduce our code.
@@ -30,27 +51,7 @@ In React, components are reusable building blocks that define specific parts of 
   - It is a JavaScript object that mirrors the structure of the Real DOM
 
   - By using the Virtual DOM, React can optimize performance by reducing
-    the amount of time spent on DOM operations, resulting in faster rendering and improved user experience
-
-## React JS Key Features
-
-* Component based architecture
-
-* JSX
-
-* Virtual DOM
-
-* Life cycle methods
-
-* Hooks
-
-* Performance Optimization
-
-* Declarative Syntax
-
-## JSX in React
-
-JavaScript allows to write HTML code directly within the JavaScript code. JSX is a key feature of React.js and is used to define the structure of React components.
+    the amount of time on DOM operations, resulting in faster rendering and improved user experience
 
 ## What are Props in React?
 
@@ -101,7 +102,7 @@ The useState is an React hook that manages and stores data within a component. I
 
 * This function accepts two arguments: an effect function and an optional dependency array. 
 
-* The useEffect function is executed after each component render. If we include a state value in the optional dependency array, the useEffect function will re-render when that state value changes..
+* The useEffect function is execute each component render. If we include a state value in the optional dependency array, the useEffect function will re-render when that state value changes..
 
 ## useContext ?
 
@@ -365,6 +366,7 @@ Two types
   - Local State (Component Level)
   - Lifting State Up
   - Global level  
+
 ## How does useState work internally?
 When you call useState(initialValue), React
  - Stores the state in a special internal structure 
@@ -378,8 +380,7 @@ When you call useState(initialValue), React
    - Only Call Hooks from React Functions
 
 ## What is lazy loading in React? How is it implemented?
-  - Used to load a component only when it's rendered.
-  - The import() function returns a Promise, so the component is only loaded when needed.
+  - Used to load a component only when needed.
   - Loading component wrapped in the suspense component
   - Suspense is handle loading state when the component load complete.
   - Works well with React Router for route-based lazy loading.
