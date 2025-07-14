@@ -342,7 +342,7 @@ Data binding in React refers to the process of synchronizing the data between th
 
 ## What is styles component in react?
 
-Styled Components is a popular library in React that allows you to write CSS-in-JS. It enables you to style your components using JavaScript, allowing you to create reusable, dynamic styles that are scoped to individual components. This approach helps to avoid issues like global styles leaking into other parts of your application and allows you to bind styles to props and component states
+Styled Components is a popular  library in React that allows you to write CSS-in-JS. It enables you to style your components using JavaScript, allowing you to create reusable, dynamic styles that are scoped to individual components. This approach helps to avoid issues like global styles leaking into other parts of your application and allows you to bind styles to props and component states
 
 
 ## How does lifting state up work in React?
@@ -351,3 +351,50 @@ Lifting state is we can share state in multiple child components ,and parent com
   
 ## What is React Fiber?
 React Fiber is the underlying engine of React that enables asynchronous rendering, better performance, and smoother UI updates.
+
+React Fiber is the reconciliation engine of React — it’s how React efficiently updates the DOM and schedules rendering.
+enable features like concurrent rendering, better error handling, and fine-grained control over rendering priorities.
+
+## How does state management work in React?
+State management in React refers to how data is stored, updated, and shared across components. 
+Two types 
+  - Local State (Component Level)
+  - Lifting State Up
+  - Global level  
+## How does useState work internally?
+When you call useState(initialValue), React
+ - Stores the state in a special internal structure 
+ - Associates it with the component and the specific hook's order of execution
+ - On updates, it triggers a re-render, and during the next render
+ - React reuses the stored state value, not the initial one
+ -  component function runs again, but the state remains consistent due to how React tracks hooks
+
+## Explain rules of hooks. Why are they important?
+   - Only Call Hooks at the Top Level
+   - Only Call Hooks from React Functions
+
+## What is lazy loading in React? How is it implemented?
+  - Used to load a component only when it's rendered.
+  - The import() function returns a Promise, so the component is only loaded when needed.
+  - Loading component wrapped in the suspense component
+  - Suspense is handle loading state when the component load complete.
+  - Works well with React Router for route-based lazy loading.
+
+## How do you debug performance issues in a React app?
+  - We use React DevTools Profiler 
+   - That will identify 
+     - Which components re-render frequently
+     - Which ones take the most time
+     - Unnecessary renders
+
+## What are common mistakes you’ve made or seen in React development?
+  - Without using usecallback to create functions
+  - without using usememo for variable declaration
+  - That cause un-neccessary function and variable re-alocation cause component re-render
+  - Without using react memo to create component prevents un-necessary re-renders
+  - Incorrect hooks usage example
+    - Missing depdndancy array for useEffect
+    - import hooks in any level of component
+  - Component with too many responsibilities
+  - With out using key prop in list element
+  - Not handling errors Gracefully 
