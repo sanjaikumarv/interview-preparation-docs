@@ -384,3 +384,14 @@ For scheduled jobs (like daily reports), I use node-cron or Agenda, which suppor
 process.nextTick() and setImmediate() both schedule functions to run asynchronously, but at different phases of the event loop.
   - process.nextTick() runs before the event loop continues — right after the current operation.
   - setImmediate() runs in the check phase, after I/O events.
+
+## Difference between token baased auth and session based auth ?
+## Why you need rate limiting? 
+## If you creating an api what are the security method id take ?
+## What is owasp attacks how you will prevent this
+
+## How you will prevent csrf reuest forgery ?
+## How you will prevent csrf attacks ?
+## What is csrf attack ?
+## graphql vs rest api ?
+## SQL vs no SQl database ?
