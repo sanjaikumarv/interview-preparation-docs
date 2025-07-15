@@ -32,6 +32,7 @@ The backend ensures the application's scalability, performance, and security. It
 * Cross-platform support: Windows, macOS, Linux.
 * Large and active community.
 
+
 ---
 
 ## Why is MongoDB popular compared to other databases?
@@ -178,6 +179,12 @@ Solved with Promises or async/await.
 * Middleware in Express.
 
 ---
+
+## What is express ?
+Express is a Node.js framework that provides a wide set of features to makes it much easier and simpler to build a web server with the use of middleware, which can handle requests and responses
+
+## What is JWT ? 
+JWT is used to transmit information securely between two parties.
 
 ## Middleware in Express
 
@@ -363,6 +370,7 @@ const readFileAsync = promisify(fs.readFile);
 ## How do you implement retries and exponential backoff in Node.js?
 
 ## How do you handle concurrency and parallelism in Node.js?
+Handle multiple tasks at the same time.
 Node.js is single-threaded but supports concurrent operations using:
  - Event loop
  - Non-blocking I/O
@@ -386,12 +394,93 @@ process.nextTick() and setImmediate() both schedule functions to run asynchronou
   - setImmediate() runs in the check phase, after I/O events.
 
 ## Difference between token baased auth and session based auth ?
+# Token based authentication
+  - User hits login , server validate user email or username and password if it not wrong
+  - After server will create a token using users specific data from jwt to send it to client
+  - After client receives the token they will pass the token for each every autheiticaed api via request header.
+  - Then server will vaildate the token and allow user make api calls
+  - But server doesnt store any tokens   
+  - No storage needed for server side for storing tokens
+
+# Session based authentication
+  - User hits login , server validate user cred and create session and stores it in memory or a database.
+  - After session id send backend to client usually stored in browser cookie.
+  - After every authenticated api request the browser sends the session ID, and the server verifies it.
+  - Server need to store session data for session id verification  
+
 ## Why you need rate limiting? 
+Rate limiting is used to restrict too many server requests from a particular IP or user within a specific time period.
+It will protect the server from abuse or attacks by blocking too many requests in a short time.
 ## If you creating an api what are the security method id take ?
-## What is owasp attacks how you will prevent this
+## ..What is owasp attacks how you will prevent this
 
 ## How you will prevent csrf reuest forgery ?
 ## How you will prevent csrf attacks ?
 ## What is csrf attack ?
+A CSRF attack happens when a user is redirected to a malicious site, and that site makes a request to a website where the user is already logged in. 
 ## graphql vs rest api ?
+# graphgl 
+ - One endpoint with flexible queries
+ - client specifies what is the response they need
+# rest API
+ - Multiple endpoint for each resource
+ - Server defines the response structure
+ - Often requires versioning
 ## SQL vs no SQl database ?
+# SQL 
+  - Structured Data format teble and rows
+  - Predefined schema
+  - Vertically scalable
+  - example mySQL
+# No SQL 
+  - Un-structured data format like json ,document
+  - Dynamic schema can store any type of data
+  - Horizandly scalable
+  - example mongodb
+
+## Explain the use of the timers module in NodeJS
+The timers module provides execution of code after a specific time or at regular intervals — just like using timers in the browser 
+## Explain the use of the passport module in NodeJS
+passport is a authentication middleware for Node.js used to handle user login and session management securely and flexibly.
+- Easy to integrate user authentication into any Express/Node.js app
+- Supports many authentication strategies (e.g., local, Google, Facebook, JWT)
+- Handles sessions and login state for you
+- Modular and easy to extend
+## What is a, fork in NodeJS?
+In Node.js, a fork is a method to create a new child process that runs a separate instance of a Node.js script, allowing parallel execution of code.
+## What are the three methods to avoid callback hell?
+ - Promises
+ - Async/await
+ - Modularization 
+
+## What is piping in NodeJS?
+Piping in Node.js is a technique used to connect the output of one stream to the input of another stream.
+It allows data to flow automatically between streams, which is especially useful when working with files, network streams, or compression.
+## How to manage sessions in NodeJS?
+sessions are commonly used to store user data between HTTP requests, like after login — to know if a user is authenticated across multiple routes.
+## How to read command line arguments in NodeJS?
+In Node.js, you can read command-line arguments using the built-in process.argv array
+It's an array containing all command-line arguments passed when starting the script.
+## Explain the NodeJS Redis module
+## What is web socket?
+WebSocket is a communication protocol that allows a persistent, two-way (full-duplex) connection between a client (like a browser) and a server over a single TCP connection.
+
+Unlike HTTP, where the client must request data every time, WebSocket keeps the connection open, so both the client and server can send messages to each other anytime — in real time.
+Full duplex Both client and server can send/receive messages simultaneously
+
+
+## Explain the util module in NodeJS
+The util module is a built-in core module that provides a set of helper functions for debugging, formatting and converting between callback and promise-based functions.
+## Explain DNS module in NodeJS
+The dns module that provides functions for performing DNS lookups — such as resolving hostnames to IP addresses.
+## What is the difference between setImmediate() and setTimeout()?
+## For NodeJS, why does Google use the V8 engine?
+V8 is written in C++ and compiles JavaScript to high-performance machine code using Just-In-Time (JIT) compilation.
+## What is an Event Emitter in Node.js?
+## Key Concepts of EventEmitter:
+## Explain the concept of stub in Node.js.
+used during unit testing to replace a real function or method.
+## What is NestJS?
+NestJS is a progressive Node.js framework used for building efficient, scalable, and maintainable server-side applications.
+It uses TypeScript by default and is heavily inspired by Angular’s architecture, such as modules, controllers, and services.
+Built-in HTTP server (Express/Fastify)
