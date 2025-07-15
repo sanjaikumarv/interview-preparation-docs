@@ -276,3 +276,16 @@ In some scnario we need to use one varible to handle multiple values
 ## What is diff between map and reduce?
 
 ## Diff between promise and callback?
+# Callback
+  - A function passed as an argument to be called later
+  - Can become messy with nested calls (callback hell)
+  - Must handle errors manually in each callback
+  - Difficult, especially with multiple async calls
+  - Original JavaScript
+
+# Promise
+  - An object representing a future value
+  - Cleaner and easier to chain
+  - Built-in .catch() for centralized errors
+  - Easy using .then()
+  - ES6 (ES2015)
