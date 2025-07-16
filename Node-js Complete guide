@@ -58,7 +58,7 @@ The backend ensures the application's scalability, performance, and security. It
 An API (Application Programming Interface) allows different software components to communicate with each other.
 
 ## Why REST APIs are Popular
-
+ 
 * Use standard HTTP methods (GET, POST, PUT, DELETE).
 * Stateless architecture.
 * Easy to scale.

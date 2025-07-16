@@ -134,3 +134,10 @@ Rewrites function allows you to rewrite the URL path on the server without redir
   - Verify tokens inside getServerSideProps or API routes
   - Use middleware for early request validation
   - Sanitize inputs to avoid injection attacks
+
+# layouts in next js
+ - In Next.js, layouts are used to define consistent page structures across multiple pages — like headers, footers, sidebars, etc. Starting from Next.js 13+, layouts are a core part of the App Router architecture.
+ - Persistent layouts between routes (no re-render unless props change)
+ - Nested layouts for different sections of your app
+ - Shared UI components across pages
+
