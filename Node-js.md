@@ -173,7 +173,7 @@ Solved with Promises or async/await.
 
 ## Error Handling
 
-* **try-catch**: For sync.
+* **try-catch**: For Async.
 * **.catch()**: For Promises.
 * **async/await**: Use try-catch.
 * Middleware in Express.
