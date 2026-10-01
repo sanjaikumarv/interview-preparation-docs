@@ -62,7 +62,7 @@ For a small API, Express may be enough. For a large application with multiple de
 
 ## 2.3 What is a Module?
 
-A module is a logical boundary that groups related functionality.
+A module is a logical boundary that groups a particular feature and its related business logic and functionality.
 
 For example:
 
@@ -156,7 +156,7 @@ Services are the most common providers, but providers can also be:
 
 ## 2.7 What is `@Injectable()`?
 
-`@Injectable()` tells NestJS that a class can participate in the dependency injection system.
+`@Injectable()` tells NestJS that a class can participate in the Dependency Injection (DI) system.
 
 ```typescript
 @Injectable()
@@ -169,11 +169,7 @@ NestJS can then inject the service into another provider or controller.
 
 ## 2.8 What are Pipes?
 
-Pipes are mainly used for:
-
-1. Validation
-2. Transformation
-
+Pipes are used to transform and validate incoming data before it reaches the controller.
 Example:
 
 ```typescript
@@ -263,7 +259,7 @@ Response
 
 ## 2.11 What are Interceptors?
 
-Interceptors wrap the execution of a request handler.
+Interceptors are classes that allow you to execute logic before and after a controller method is executed.
 
 They can execute logic:
 
@@ -430,6 +426,10 @@ DatabaseModule.forRoot({
 ```
 
 ---
+
+## What are Custom Decorators in NestJS?
+
+A custom decorator is a user-defined decorator that adds reusable metadata or behavior to controllers, methods, or parameters.
 
 ## 3.2 What is `forRoot()` vs `forFeature()`?
 
