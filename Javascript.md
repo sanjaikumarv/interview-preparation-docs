@@ -259,6 +259,8 @@ The event loop in JavaScript is a runtime model that allows JavaScript to handl
 
 ## What is hoiesting and how to it works?
 
+## What is javascript event listeners?
+
 ## What is event loop in js
 
 ## What is diff between setTimeout and setIntertval?
