@@ -38,11 +38,23 @@ Fault tolerance means a system can continue working even when one or more compon
 
 is a network of servers distributed across different geographic locations that cache and serve content closer to users.
 
+## Replication
+
+Replication is the process of creating and maintaining copies of the same data on multiple servers.
+
+## Partitioning
+
+Partitioning is the process of splitting a large dataset into smaller parts called partitions, so the data can be managed and accessed more efficiently.
+
 ## Read replicas
 
 A read replica is a copy of the primary database that is mainly used to handle read queries.
 
 Primary database handles writes, while read replicas handle some of the reads.
+
+## Eventual Consistency
+
+When data is updated, all copies of that data may not be updated immediately, but they will become consistent after some time
 
 ## Connection Pooling
 
