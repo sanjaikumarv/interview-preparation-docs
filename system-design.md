@@ -32,6 +32,10 @@ So, when the user requests that content, the request can be served from the near
 
 This helps reduce latency and also reduces the load on the main server.
 
+## What is Caching?
+
+Caching means temporarily storing frequently used data in a faster place so we don't have to fetch or calculate it again
+
 ## What is api gateway ?
 
 API Gateway is a server that sits between the clients and the microservices.
