@@ -10,7 +10,7 @@
 
 - **Interface Segregation Principle** - Don't force a class to implement methods that it doesn't need..
 
-- **Dependency Inversion Principle** - Depend on abstractions, not on concretions.
+- **Dependency Inversion Principle** - Classes depend on abstractions, not on concretions.
 
 ## Factory pattern
 

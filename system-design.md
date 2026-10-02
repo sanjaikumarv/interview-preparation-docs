@@ -20,11 +20,27 @@ A reverse proxy is a server that sits between the client and your backend server
 
 Instead of the client directly accessing your backend, the client sends the request to the reverse proxy, and the reverse proxy forwards the request to the appropriate backend server.
 
+## CDN
+
+CDN is a network of servers distributed across different geographical locations.
+
+For example, if my main server is deployed in the Mumbai region and a user from the US makes a request, the user doesn't need to send every request to the Mumbai server.
+
+Instead, the CDN has edge servers located closer to the user. The CDN can cache static content such as images, videos, CSS, JavaScript files, and other frequently accessed content.
+
+So, when the user requests that content, the request can be served from the nearest CDN edge server instead of going all the way to the Mumbai server.
+
+This helps reduce latency and also reduces the load on the main server.
+
 ## What is api gateway ?
 
 API Gateway is a server that sits between the clients and the microservices.
 
 Instead of the client directly accessing the microservices, the client sends the request to the API Gateway, and the API Gateway forwards the request to the appropriate microservice.
+
+## What is the replication
+
+Replication means copying data from one database/server to another database/server and keeping them synchronized
 
 ## What is High Availability?
 
@@ -34,23 +50,15 @@ means designing a system so that it continues to work with minimal downtime even
 
 Fault tolerance means a system can continue working even when one or more components fail.
 
-## Where CDN appropriate
-
-is a network of servers distributed across different geographic locations that cache and serve content closer to users.
-
-## Replication
-
-Replication is the process of creating and maintaining copies of the same data on multiple servers.
-
-## Partitioning
-
-Partitioning is the process of splitting a large dataset into smaller parts called partitions, so the data can be managed and accessed more efficiently.
-
 ## Read replicas
 
 A read replica is a copy of the primary database that is mainly used to handle read queries.
 
 Primary database handles writes, while read replicas handle some of the reads.
+
+## What is a Transaction?
+
+A transaction is a group of database operations that should be treated as one unit of work
 
 ## Eventual Consistency
 
@@ -59,6 +67,24 @@ When data is updated, all copies of that data may not be updated immediately, bu
 ## Connection Pooling
 
 means creating a pool of reusable database connections instead of creating a new database connection for every API request.
+
+## Observability
+
+Observability means being able to understand the internal state of your system by looking at its external outputs.
+
+## When should communication be asynchronous?
+
+client doesn't wait for the receiver to finish processing before continuing
+
+When the operation doesn't need an immediate response
+
+## How do you prevent cascading failures?
+
+A cascading failure happens when one service fails or becomes slow, and that problem spreads to other services until the whole system starts failing.
+
+- Timeout
+- circuit breaker
+- Retry with exponential backoff
 
 ## Normalization vs Denormalization
 
@@ -99,6 +125,8 @@ The cache always tries to stay synchronized with the database.
 ## Write-Behind Caching?
 
 Write-behind caching means the application writes data to the cache first, and the cache updates the database later asynchronously.
+
+## How do you handle cache invalidation?
 
 ## Cache eviction strategies
 
@@ -154,6 +182,10 @@ Both are message-broker systems, but they are commonly used for different purpos
 
 - RabbitMQ → Message processing / task queues
 - Kafka → Event streaming / high-volume data
+
+## What is a Consumer Group?
+
+Each message is processed by only one consumer within the same consumer group.
 
 ## DLQ (Dead Letter Queue)
 
