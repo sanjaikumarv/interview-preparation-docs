@@ -51,7 +51,6 @@ functions are reusable blocks of code designed to perform specific tasks. They a
 ## Normal Funtions vs Arrow Functions
 
 - Normal Functions
-
   - Normal functions are traditional way implement function
   - Uses the function keyword to define a function.
   - Syntax can include a name or be .
@@ -156,7 +155,6 @@ is used to perform logical operations between two or more expressions. It return
 Async and Await in JavaScript is used to simplify handling asynchronous operations using promises. By enabling asynchronous code to appear synchronous, they enhance code readability and make it easier to manage complex asynchronous flows.
 
 - Async
-
   - function allows us to write promise-based code.
   - Async functions will always return a value.
 
@@ -219,7 +217,6 @@ Scope are where in our code a particular variable or function can be accessed or
 - there are two types of scopes
 
 - Global scope
-
   - variable or function is declared outside of any function or block, it has global scope.
 
 - Functional scope
@@ -294,3 +291,135 @@ In some scnario we need to use one varible to handle multiple values
 - Built-in .catch() for centralized errors
 - Easy using .then()
 - ES6 (ES2015)
+
+# Scope
+
+- Scope means the area of your code where a variable can be accessed.
+- Scope determines where a variable is visible and where it is not visible.
+
+- Global Scope
+- Function Scope
+- Block Scope
+- Module Scope
+
+## Global Scope
+
+- A variable declared outside functions/blocks is globally accessible.
+
+`
+const appName = "My App";
+
+function showApp() {
+console.log(appName);
+}
+
+showApp(); // My App
+`
+
+## Function Scope
+
+- Variables declared with var inside a function are accessible throughout that function.
+
+`
+function test() {
+var name = "Sanjai";
+
+console.log(name); // Sanjai
+}
+
+test();
+
+console.log(name); // ❌ Error
+`
+
+## Block Scope
+
+- Let and const are block scoped. Meaning variables declared inside {} are only accessible within that block.
+- Var is function scoped, not block scoped.
+- This prevents accidental variable access from outside the block.
+
+`
+if (true) {
+let age = 25;
+const name = "Sanjai";
+
+console.log(age); // 25
+}
+
+console.log(age); // ❌ Error
+console.log(name); // ❌ Error
+`
+
+## Module Scope
+
+- Variables declared inside a module are only accessible within that module
+- This prevents variables from leaking into the global scope
+
+## Lexical Scope
+
+- A function can access variables based on where the function is written, not where the function is called.
+
+`
+const a = 10;
+
+function outer() {
+const b = 20;
+
+function inner() {
+const c = 30;
+
+    console.log(a);
+    console.log(b);
+    console.log(c);
+
+}
+
+inner();
+}
+
+outer();
+`
+
+## Prototype
+
+- Prototype is an object, that another object can inherit properties and methods
+
+without prototype
+
+`
+const user1 = {
+name: "Sanjai",
+login() {
+console.log("Login");
+}
+};
+
+const user2 = {
+name: "Rahul",
+login() {
+console.log("Login");
+}
+};
+`
+
+with prototype
+
+`
+function User(name) {
+this.name = name;
+}
+
+User.prototype.login = function () {
+console.log(`${this.name} logged in`);
+};
+
+const user1 = new User("Sanjai");
+const user2 = new User("Rahul");
+
+user1.login();
+user2.login();
+`
+
+## Debouncing
+
+Debouncing delays the execution of a function until a specified amount of time has passed since the last event

@@ -166,7 +166,8 @@ Apache Kafka is a distributed event-streaming platform used to send, store, and 
 
 ## Why would you use Kafka?
 
-Kafka is used to handle a large number of messages/events between services reliably and asynchronously.
+Kafka is used to handle a large number of messages/events
+between services reliably and asynchronously.
 
 Kafka can handle a large number of messages.
 

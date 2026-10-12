@@ -1195,6 +1195,8 @@ Example:
 
 **Throttling** controls or slows request processing when traffic exceeds a defined capacity.
 
+Throttling controls how frequently an operation is allowed to execute.
+
 They are related concepts but not exactly the same.
 
 ---

@@ -8,7 +8,7 @@
 
 - **Liskov Substitution Principle** - A child class should be able to replace its parent class without breaking the application.
 
-- **Interface Segregation Principle** - Don't force a class to implement methods that it doesn't need..
+- **Interface Segregation Principle** - Don't force a class to implement methods that it doesn't need.
 
 - **Dependency Inversion Principle** - Classes depend on abstractions, not on concretions.
 

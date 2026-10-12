@@ -1,18 +1,12 @@
+// function Arr() {
+//   const numbers = [2, 2, 3, 4];
+//   const product = numbers.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue;
+//   });
+//   console.log(product);
+// }
 
-
-
-
-// // // // function Arr() {
-// // // //     const numbers = [2, 2, 3, 4];
-// // // //     const product = numbers.reduce((accumulator, currentValue, crrIdx, arr) => {
-// // // //         console.log("acc", accumulator, "crr", currentValue, "crrIdx", crrIdx, "arr", arr)
-// // // //         return arr
-// // // //     });
-// // // //     console.log(product);
-// // // // }
-
-// // // // Arr()
-
+// Arr();
 
 // const { pipeline } = require('node:stream/promises');
 // const fs = require('node:fs');
@@ -43,52 +37,52 @@
 // }
 
 // getData();
-const fs = require('node:fs');
+// const fs = require("node:fs");
 
-async function getData() {
-    const chunks = [];
+// async function getData() {
+//   const chunks = [];
 
-    // Read file in chunks
-    for await (const chunk of fs.createReadStream('work.txt')) {
-        chunks.push(chunk);
-    }
+//   // Read file in chunks
+//   for await (const chunk of fs.createReadStream("work.txt")) {
+//     chunks.push(chunk);
+//   }
 
-    const data = Buffer.concat(chunks); // Combine into one Buffer
+//   const data = Buffer.concat(chunks); // Combine into one Buffer
 
-    // Create a writable stream
-    const writeStream = fs.createWriteStream('archive.tar.gz');
-    writeStream.write(data); // Write buffer to the stream
-    writeStream.end();       // Close the stream
+//   // Create a writable stream
+//   const writeStream = fs.createWriteStream("archive.tar.gz");
+//   writeStream.write(data); // Write buffer to the stream
+//   writeStream.end(); // Close the stream
 
-    // Wait for the stream to finish writing
-    await new Promise((resolve, reject) => {
-        writeStream.on('finish', resolve);
-        writeStream.on('error', reject);
-    });
+//   // Wait for the stream to finish writing
+//   await new Promise((resolve, reject) => {
+//     writeStream.on("finish", resolve);
+//     writeStream.on("error", reject);
+//   });
 
-    console.log('Data written successfully');
-}
+//   console.log("Data written successfully");
+// }
 
-getData().catch(console.error);
+// getData().catch(console.error);
 
-// // // const arr = [1, 20, [100, 4, [5, 6]], 7, 8, [9, [10]]];
+// const arr = [1, 20, [100, 4, [5, 6]], 7, 8, [9, [10]]];
 
-// // // function getBiggest(arr) {
-// // //     let cnn = 0
-// // //     if (Array.isArray(arr)) {
-// // //         for (const item of arr) {
-// // //             const number = getBiggest(item);
-// // //             if (number > cnn) {
-// // //                 cnn = number;
-// // //             }
-// // //         }
-// // //     } else if (arr > cnn) {
-// // //         cnn = arr;
-// // //     }
-// // //     return cnn;
-// // // }
+// function getBiggest(arr) {
+//   let cnn = 0;
+//   if (Array.isArray(arr)) {
+//     for (const item of arr) {
+//       const number = getBiggest(item);
+//       if (number > cnn) {
+//         cnn = number;
+//       }
+//     }
+//   } else if (arr > cnn) {
+//     cnn = arr;
+//   }
+//   return cnn;
+// }
 
-// // // console.log(getBiggest(arr));
+// console.log(getBiggest(arr));
 // // Suppose you're building an ecommerce app with 5 products.
 // //     * Black Shoes x 5
 // //         * White Shoes x 2
@@ -132,8 +126,6 @@ getData().catch(console.error);
 // // }
 // // let orderQueues = {}
 
-
-
 // // const handleIncomingOrder = (order) => {
 // //     const getCurrentinventory = inventory.find((item) => item.id === orderId)
 // //     if (!getCurrentinventory) {
@@ -173,9 +165,6 @@ getData().catch(console.error);
 // // }
 
 // // handleIncomingOrder({ itemId: 1, quantity: 3 })
-
-
-
 
 // const inventory = {
 //     red: 10,
@@ -278,36 +267,7 @@ getData().catch(console.error);
 //     placeOrder('blue', 4)
 // ]);
 
-
 const inventory = { red: 10, blue: 5, green: 8 };
-const locks = { red: false, blue: false, green: false };
-
-async function placeOrder(color, quantity) {
-    // Wait until the lock is free
-    while (locks[color]) {
-        await new Promise(res => setTimeout(res, 10));
-    }
-
-    locks[color] = true; // acquire lock
-
-    if (inventory[color] >= quantity) {
-        inventory[color] -= quantity;
-        console.log(`✅ Order Placed: ${color} -${quantity}, Remaining: ${inventory[color]}`);
-    } else {
-        console.log(`❌ Order Failed: Not enough ${color}`);
-    }
-
-    locks[color] = false; // release lock
-}
-
-// Usage
-Promise.allSettled([
-    placeOrder('red', 3),
-    placeOrder('red', 5),
-    placeOrder('red', 4),
-])
-
-
 
 // function mySAcquireLock(color) {
 //     if (!locks[color]) {
@@ -352,69 +312,49 @@ Promise.allSettled([
 //     return currentLock.then(() => unlockNext);
 // }
 
+const locks = {}; // to track locks for each color
 
-// const inventory = {
-//     red: 10,
-//     blue: 5,
-//     green: 8
-// };
+function myAcquireLock(color) {
+  if (locks?.[color]) {
+    locks[color] = Promise.resolve();
+  }
+  let unlockNext;
+  const currentLock = locks[color];
+  locks[color] = new Promise((resolve) => {
+    unlockNext = () => resolve();
+  });
+  return currentLock.then(() => unlockNext);
+}
+async function updateInventory(color, quantity) {
+  const release = await myAcquireLock(color);
+  try {
+    if (!inventory[color]) {
+      console.log(`No such color: ${color}`);
+      return;
+    }
 
-// const locks = {}; // to track locks for each color
-
-// // function myAcquireLock(color) {
-// //     if (!locks[color]) {
-// //         console.log("promise", locks[color])
-// //         console.log("rendering...")
-// //         locks[color] = Promise.resolve();
-// //         console.log("olo", locks[color])
-// //     }
-// //     console.log("render---.")
-// //     let unlockNext;
-// //     const willLock = new Promise(resolve => {
-// //         unlockNext = () => resolve();
-// //     });
-// //     console.log("rendered---->w", willLock)
-// //     const currentLock = locks[color];
-// //     console.log("currentLock", currentLock)
-// //     locks[color] = new Promise(resolve => {
-// //         unlockNext = () => resolve();
-// //     });
-// //     console.log("lockpromise", locks[color])
-// //     console.log("lockpromise2", currentLock)
-// //     console.log("--------------------------------")
-// //     return currentLock.then(() => unlockNext);
-// // }
-// async function updateInventory(color, quantity) {
-//     const release = await acquireLock(color);
-//     console.log("lock granted")
-//     try {
-//         if (!inventory[color]) {
-//             console.log(`No such color: ${color}`);
-//             return;
-//         }
-
-//         if (inventory[color] >= quantity) {
-//             inventory[color] -= quantity;
-//             console.log(`Success: ${color} -${quantity}. Remaining: ${inventory[color]}`);
-//         } else {
-//             console.log(`Failed: Not enough ${color} shoes`);
-//         }
-//     } finally {
-//         release(); // release lock
-//     }
-
-
-// }
+    if (inventory[color] >= quantity) {
+      inventory[color] -= quantity;
+      console.log(
+        `Success: ${color} -${quantity}. Remaining: ${inventory[color]}`,
+      );
+    } else {
+      console.log(`Failed: Not enough ${color} shoes`);
+    }
+  } finally {
+    release(); // release lock
+  }
+}
 
 // Promise.allSettled([
-//     updateInventory('red', 3),
-//     updateInventory('red', 5),
-//     updateInventory('red', 5),
-//     updateInventory('red', 5),
-//     updateInventory('red', 5),
-//     updateInventory('red', 4),
-//     updateInventory('blue', 2),
-//     updateInventory('blue', 4)
+//   updateInventory("red", 3),
+//   updateInventory("red", 5),
+//   updateInventory("red", 5),
+//   updateInventory("red", 5),
+//   updateInventory("red", 5),
+//   updateInventory("red", 4),
+//   updateInventory("blue", 2),
+//   updateInventory("blue", 4),
 // ]);
 // updateInventory('red', 3);
 // updateInventory('red', 5);
@@ -424,7 +364,6 @@ Promise.allSettled([
 // updateInventory('red', 4);
 // updateInventory('blue', 2);
 // updateInventory('blue', 4);
-
 
 // // Helper function
 // function waitUntil(conditionFn, intervalMs = 100) {
@@ -453,3 +392,35 @@ Promise.allSettled([
 // }
 
 // main();
+
+// function reverseString(string) {
+//   if (string.length === 0) return "";
+//   return reverseString(string.slice(1)) + string[0];
+// }
+
+// console.log(reverseString("sanjai"));
+
+function binarySearch(arr, target) {
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
+
+    if (arr[mid] === target) {
+      return mid;
+    }
+
+    if (arr[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return -1;
+}
+
+const numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+console.log(binarySearch(numbers, 100)); // 5
